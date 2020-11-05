@@ -124,22 +124,22 @@ This section shows the how to set up Kubeflow with authentication and authorizat
     - hosts:
         - '*'
         port:
-        name: http
-        number: 80
-        protocol: HTTP
+          name: http
+          number: 80
+          protocol: HTTP
               # Upgrade HTTP to HTTPS
         tls:
-        httpsRedirect: true
+          httpsRedirect: true
     - hosts:
         - '*'
         port:
-        name: https
-        number: 443
-        protocol: HTTPS
+          name: https
+          number: 443
+          protocol: HTTPS
         tls:
-        mode: SIMPLE
-        privateKey: /etc/istio/ingressgateway-certs/tls.key
-        serverCertificate: /etc/istio/ingressgateway-certs/tls.crt
+          mode: SIMPLE
+          privateKey: /etc/istio/ingressgateway-certs/tls.key
+          serverCertificate: /etc/istio/ingressgateway-certs/tls.crt
     {{< /highlight >}}
 
 1. Expose Kubeflow with a load balancer service:
